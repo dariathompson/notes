@@ -3,8 +3,7 @@ function testStoresText() {
 
   if (note.text !== 'This is a note') {
     throw new Error("Text is not stored");
-  }
-  if (note.text === 'This is a note') {
+  } else {
     console.log("Test is passing");
   }
 };
