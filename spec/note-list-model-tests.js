@@ -18,4 +18,17 @@ testAddsNotes();
 };
 
 testDisplaysNotes();
+
+  function testNoteId() {
+   var list = new NoteList;
+   list.addNote("test note");
+   assert.isTrue(list.notes[0].id === 0);
+
+  }
+  testNoteId();
+
+
+
+
 })(this);
+
