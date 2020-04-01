@@ -9,6 +9,11 @@
 <body>
   <div id="app">hello</div>
   <div id="note"></div>
+  <form id="text" action="/new" method="POST">
+    <h3>Add note</h3>
+    <textarea name="" id="noteText" cols="30" rows="10"></textarea>
+    <button type="submit" name="submit">Submit</button>
+  </form>
   <script src='lib/note-model.js'></script>
   <script src='lib/note-list-model.js'></script>
   <script src='lib/note-list-view.js'></script>
