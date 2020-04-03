@@ -17,12 +17,15 @@ As a programmer
 I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
-
-To start server run from command line
+Install http-server from command line
+```
+npm install http-server --save
+```
+To start server run
 ```
 node node_modules/http-server/bin/http-server
 ```
 Visit
 ```
-http://localhost:8080/index.html
+http://localhost:8080
 ```
