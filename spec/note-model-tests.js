@@ -1,13 +1,14 @@
-function testStoresText() {
-  var note = new Note('This is a note');
-  assert.isTrue(note.text === 'This is a note');
-};
-
-testStoresText();
-
-function testReadsNote() {
-  var note = new Note('This is a new note');
-  assert.isTrue(note.read() === 'This is a new note');
-};
-
-testReadsNote();
+describe('Note', () => {
+  describe('.text', () => {
+    it('stores text of the note', () => {
+      let note = new Note('This is a note');
+      expect(note.text).toEq('This is a note');
+    })
+  })
+  describe('.read', () => {
+    it('reads text of the note', () => {
+      let note = new Note('This is a note');
+      expect(note.read()).toEq('This is a note');
+    })
+  })
+})

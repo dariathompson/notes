@@ -1,6 +1,9 @@
-function testSingleView(){
-  var note = new Note('Daria is really good');
-  var singleNoteView = new SingleNoteView(note);
-  assert.isTrue(singleNoteView.htmlNote() === '<div>Daria is really good</div>')
-} 
-testSingleView();
+describe('SingleNoteView', () => {
+  describe('.htmlNote()', () => {
+    it('returns html for single note', () => {
+      let note = new Note('Daria is really good');
+      let singleNoteView = new SingleNoteView(note);
+      expect(singleNoteView.htmlNote()).toEq('<div>Daria is really good</div>');
+    })
+  })
+})

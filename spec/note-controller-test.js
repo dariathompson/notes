@@ -1,23 +1,21 @@
-// function viewNotesInHtml() {
-//   function NotelistviewDouble() {
-//   }
-//   NotelistviewDouble.prototype = {
-//       showList: function(){
-//         return "<ul><li><div>test</div></li><li><div>test2</div></li></ul>"
-//       }
-//     }
-//     let notecontroller = new Notecontroller(new NotelistviewDouble());
-//     notecontroller.noteListView = new NotelistviewDouble();
-//     notecontroller.outputToHTML()
-
-//   var list = new NoteListDouble;
-//   list.addNote('Rafa is amazing');
-//   list.addNote('And beautiful');
-  
-//   var controller = new NoteController(list);
-//   controller.showHtml()
-//   assert.isTrue(app.innerHTML === "<ul><li><div>Rafa is amazing</div></li><li><div>And beautiful</div></li></ul>");
-  
-// };
-
-// viewNotesInHtml()
+describe('NoteController', () =>{
+  describe('.noteList', () => {
+    it('stores list of notes', () =>{
+      let list = new NoteList;
+      list.addNote('Note 1');
+      list.addNote('Note 2');
+      let noteController = new NoteController(list);
+      expect(noteController.noteList.notes.length).toEq(2);
+    })
+  })
+  describe('.noteListView', () => {
+    it('stores view for list of notes', () =>{
+      let list = new NoteList;
+      list.addNote('Note 1');
+      list.addNote('Note 2');
+      let noteController = new NoteController(list);
+      expect(noteController.noteListView.viewNotes()).toInclude('Note 1');
+      expect(noteController.noteListView.viewNotes()).toInclude('Note 2');
+    })
+  })
+})
